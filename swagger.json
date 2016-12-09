@@ -1,0 +1,3474 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "MSA-FAKER",
+        "description": "A fake data generator",
+        "version": "1.0.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/ms/version": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice version number",
+                "responses": {
+                    "200": {
+                        "description": "the microservice version number"
+                    }
+                }
+            }
+        },
+        "/ms/name": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice name",
+                "responses": {
+                    "200": {
+                        "description": "the microservice name"
+                    }
+                }
+            }
+        },
+        "/ms/readme.md": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice readme in markdown",
+                "responses": {
+                    "200": {
+                        "description": "the readme in markdown"
+                    }
+                }
+            }
+        },
+        "/ms/readme.html": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice readme in html",
+                "responses": {
+                    "200": {
+                        "description": "the readme in html"
+                    }
+                }
+            }
+        },
+        "/swagger/swagger.json": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the microservice Swagger JSON file",
+                "responses": {
+                    "200": {
+                        "description": "the Swagger JSON file"
+                    }
+                }
+            }
+        },
+        "/swagger/#": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return the Swagger-UI page",
+                "responses": {
+                    "200": {
+                        "description": "the Swagger-UI page"
+                    }
+                }
+            }
+        },
+        "/nginx/stats.json": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return stats about Nginx in JSON",
+                "responses": {
+                    "200": {
+                        "description": "the stats about Nginx in JSON"
+                    }
+                }
+            }
+        },
+        "/nginx/stats.html": {
+            "get": {
+                "tags": [
+                    "msa-standard"
+                ],
+                "summary": "Return a dashboard displaying the stats from Nginx",
+                "responses": {
+                    "200": {
+                        "description": "the Nginx stats dashboard"
+                    }
+                }
+            }
+        },
+        "/faker/locales": {
+            "get": {
+                "tags": [
+                    "msa-faker-locales"
+                ],
+                "summary": "Return the list of supported locales as a json array",
+                "responses": {
+                    "200": {
+                        "description": "the list of supported locales"
+                    }
+                }
+            }
+        },
+        "/faker/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake name, ex \"Tyshawn Johns Sr.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake name"
+                    }
+                }
+            }
+        },
+        "/faker/name-with-middle": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake name, ex \"Aditya Elton Douglas\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake name with middle"
+                    }
+                }
+            }
+        },
+        "/faker/name/firstname": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake firstname, ex \"Kaci\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake firstname"
+                    }
+                }
+            }
+        },
+        "/faker/name/lastname": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake lastname, ex \"Ernser\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake lastname"
+                    }
+                }
+            }
+        },
+        "/faker/name/prefix": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake prefix, ex \"Mr.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake prefix"
+                    }
+                }
+            }
+        },
+        "/faker/name/suffix": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake suffix, ex \"IV\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake suffix"
+                    }
+                }
+            }
+        },
+        "/faker/name/title": {
+            "get": {
+                "tags": [
+                    "msa-faker-name"
+                ],
+                "summary": "Return a fake title, ex \"Legacy Creative Director\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake title"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a fake phone-number, ex \"397.693.1309\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake phone-number"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number/cell-phone": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a fake cell-phone number, ex \"(186)285-7925\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake cell-phone number"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number/area-code": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a random US area code, ex \"201\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random area code"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number/exchange-code": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a random US exchange code, ex \"208\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random exchange code"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number/subscriber": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a fake subscriber number, ex \"3873\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake subscriber number"
+                    }
+                }
+            }
+        },
+        "/faker/phone-number/extension": {
+            "get": {
+                "tags": [
+                    "msa-faker-phone-number"
+                ],
+                "summary": "Return a fake extension number, ex \"3764\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake extension number"
+                    }
+                }
+            }
+        },
+        "/faker/address/city": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake city, ex \"Imogeneborough\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake city"
+                    }
+                }
+            }
+        },
+        "/faker/address/street-name": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake street-name, ex \"Larkin Fork\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake street-name"
+                    }
+                }
+            }
+        },
+        "/faker/address/street-address": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake street-address, ex \"282 Kevin Brook\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake street-address"
+                    }
+                }
+            }
+        },
+        "/faker/address/secondary-address": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake secondary-address, ex \"Apt. 672\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake secondary-address"
+                    }
+                }
+            }
+        },
+        "/faker/address/building-number": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake building-number, ex \"7304\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake building-number"
+                    }
+                }
+            }
+        },
+        "/faker/address/zip-code": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random zip-code, ex \"58517\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random zip-code"
+                    }
+                }
+            }
+        },
+        "/faker/address/zip": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random zip, ex \"58517\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random zip"
+                    }
+                }
+            }
+        },
+        "/faker/address/postcode": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random postcode, ex \"58517\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random postcode"
+                    }
+                }
+            }
+        },
+        "/faker/address/time-zone": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random time-zone, ex \"Asia/Yakutsk\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random time-zone"
+                    }
+                }
+            }
+        },
+        "/faker/address/street-suffix": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake street-suffix, ex \"Street\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake street-suffix"
+                    }
+                }
+            }
+        },
+        "/faker/address/city-suffix": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake city-suffix, ex \"fort\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake city-suffix"
+                    }
+                }
+            }
+        },
+        "/faker/address/city-prefix": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a fake city-prefix, ex \"Lake\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake city-prefix"
+                    }
+                }
+            }
+        },
+        "/faker/address/state": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random state, ex \"California\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random state"
+                    }
+                }
+            }
+        },
+        "/faker/address/state-abbr": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random state-abbr, ex \"AP\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random state-abbr"
+                    }
+                }
+            }
+        },
+        "/faker/address/country": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random country, ex \"French Guiana\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random country"
+                    }
+                }
+            }
+        },
+        "/faker/address/country-code": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random country-code, ex \"IT\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random country-code"
+                    }
+                }
+            }
+        },
+        "/faker/address/latitude": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random latitude, ex \"-58.17256227443719\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random latitude"
+                    }
+                }
+            }
+        },
+        "/faker/address/longitude": {
+            "get": {
+                "tags": [
+                    "msa-faker-address"
+                ],
+                "summary": "Return a random longitude, ex \"-156.65548382095133\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random longitude"
+                    }
+                }
+            }
+        },
+        "/faker/business/credit-card/number": {
+            "get": {
+                "tags": [
+                    "msa-faker-business"
+                ],
+                "summary": "Return a fake credit card number, ex \"1228-1221-1221-1431\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the a fake credit card number"
+                    }
+                }
+            }
+        },
+        "/faker/business/credit-card/expiry-date": {
+            "get": {
+                "tags": [
+                    "msa-faker-business"
+                ],
+                "summary": "Return a fake credit card expiry-date, ex \"\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake credit card expiry-date"
+                    }
+                }
+            }
+        },
+        "/faker/business/credit-card/type": {
+            "get": {
+                "tags": [
+                    "msa-faker-business"
+                ],
+                "summary": "Return a fake credit card type, ex  \"visa\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake credit card type"
+                    }
+                }
+            }
+        },
+        "/faker/commerce/department": {
+            "get": {
+                "tags": [
+                    "msa-faker-commerce"
+                ],
+                "summary": "Return a fake department name, ex \"Grocery, Health & Beauty\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake department name"
+                    }
+                }
+            }
+        },
+        "/faker/commerce/product-name": {
+            "get": {
+                "tags": [
+                    "msa-faker-commerce"
+                ],
+                "summary": "Return a fake product name, ex \"Practical Granite Shirt\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake product name"
+                    }
+                }
+            }
+        },
+        "/faker/commerce/price": {
+            "get": {
+                "tags": [
+                    "msa-faker-commerce"
+                ],
+                "summary": "Return a fake price, ex \"44.6\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake price"
+                    }
+                }
+            }
+        },
+        "/faker/company/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company name, ex \"Hirthe-Ritchie\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company name"
+                    }
+                }
+            }
+        },
+        "/faker/company/suffix": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company suffix , ex \"Group\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company suffix"
+                    }
+                }
+            }
+        },
+        "/faker/company/catch-phrase": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company catch phrase , ex \"Business-focused coherent parallelism\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company catch phrase"
+                    }
+                }
+            }
+        },
+        "/faker/company/buzzword": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company buzzword , ex \"Business-focused\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company buzzword"
+                    }
+                }
+            }
+        },
+        "/faker/company/bs": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company bs , ex \"empower one-to-one web-readiness\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company bs"
+                    }
+                }
+            }
+        },
+        "/faker/company/ein": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company ein , ex \"34-8488813\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company ein"
+                    }
+                }
+            }
+        },
+        "/faker/company/duns": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company duns number, ex \"08-341-3736\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company duns number"
+                    }
+                }
+            }
+        },
+        "/faker/company/logo": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake company logo url, ex \"https://pigment.github.com/fake-logos/logos/medium/color/5.png\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake company logo url"
+                    }
+                }
+            }
+        },
+        "/faker/company/swedish-organisation-number": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake swedish organisation number, ex \"7718797652\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake swedish organisation number"
+                    }
+                }
+            }
+        },
+        "/faker/company/australian-business-number": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake australian business number, ex \"81137773602\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake australian business number"
+                    }
+                }
+            }
+        },
+        "/faker/company/profession": {
+            "get": {
+                "tags": [
+                    "msa-faker-company"
+                ],
+                "summary": "Return a fake profession, ex \"firefighter\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake profession"
+                    }
+                }
+            }
+        },
+        "/faker/book/title": {
+            "get": {
+                "tags": [
+                    "msa-faker-book"
+                ],
+                "summary": "Return a fake book title, ex \"The Odd Sister\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake book title"
+                    }
+                }
+            }
+        },
+        "/faker/book/author": {
+            "get": {
+                "tags": [
+                    "msa-faker-book"
+                ],
+                "summary": "Return a fake book author, ex \"Alysha Olsen\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake book author"
+                    }
+                }
+            }
+        },
+        "/faker/book/publisher": {
+            "get": {
+                "tags": [
+                    "msa-faker-book"
+                ],
+                "summary": "Return a fake book publisher, ex \"Opus Reader\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake book publisher"
+                    }
+                }
+            }
+        },
+        "/faker/book/genre": {
+            "get": {
+                "tags": [
+                    "msa-faker-book"
+                ],
+                "summary": "Return a random book genre, ex \"Mystery\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random book genre"
+                    }
+                }
+            }
+        },
+        "/faker/educator/university": {
+            "get": {
+                "tags": [
+                    "msa-faker-university"
+                ],
+                "summary": "Return a random university name, ex \"Mallowtown Technical College\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random university name"
+                    }
+                }
+            }
+        },
+        "/faker/educator/secondary-school": {
+            "get": {
+                "tags": [
+                    "msa-faker-university"
+                ],
+                "summary": "Return a random secondary-school name, ex \"Iceborough Secodary College\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random secondary-school name"
+                    }
+                }
+            }
+        },
+        "/faker/educator/course": {
+            "get": {
+                "tags": [
+                    "msa-faker-university"
+                ],
+                "summary": "Return a random university course name, ex \"Associate Degree in Criminology\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random university course name"
+                    }
+                }
+            }
+        },
+        "/faker/educator/campus": {
+            "get": {
+                "tags": [
+                    "msa-faker-university"
+                ],
+                "summary": "Return a random campus name, ex \"Vertapple Campus\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random campus name"
+                    }
+                }
+            }
+        },
+        "/faker/team/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-team"
+                ],
+                "summary": "Return a fake team name, ex \"Oregon vixens\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake team name"
+                    }
+                }
+            }
+        },
+        "/faker/team/state": {
+            "get": {
+                "tags": [
+                    "msa-faker-team"
+                ],
+                "summary": "Return a random state, ex \"Oregon\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random state"
+                    }
+                }
+            }
+        },
+        "/faker/team/sport": {
+            "get": {
+                "tags": [
+                    "msa-faker-team"
+                ],
+                "summary": "Return a random sport, ex \"lacrosse\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random sport"
+                    }
+                }
+            }
+        },
+        "/faker/team/creature": {
+            "get": {
+                "tags": [
+                    "msa-faker-team"
+                ],
+                "summary": "Return a random creature, ex \"gooses\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random creature"
+                    }
+                }
+            }
+        },
+        "/faker/bitcoin/address": {
+            "get": {
+                "tags": [
+                    "msa-faker-bitcoin"
+                ],
+                "summary": "Return a fake bitcoin address, ex \"1HUoGjmgChmnxxYhz87YytV4gVjfPaExmh\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake bitcoin address"
+                    }
+                }
+            }
+        },
+        "/faker/bitcoin/testnet-address": {
+            "get": {
+                "tags": [
+                    "msa-faker-bitcoin"
+                ],
+                "summary": "Return a fake bitcoin testnet address, ex \"msHGunDvoEwmVFXvd2Bub1SNw5RP1YHJaf\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake bitcoin testnet address"
+                    }
+                }
+            }
+        },
+        "/faker/codes/isbn": {
+            "get": {
+                "tags": [
+                    "msa-faker-codes"
+                ],
+                "summary": "Return a fake isbn code, ex \"759021701-8\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake isbn code"
+                    }
+                }
+            }
+        },
+        "/faker/codes/ean": {
+            "get": {
+                "tags": [
+                    "msa-faker-codes"
+                ],
+                "summary": "Return a fake ean code, ex \"4600051000057\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake ean code"
+                    }
+                }
+            }
+        },
+        "/faker/codes/imei": {
+            "get": {
+                "tags": [
+                    "msa-faker-codes"
+                ],
+                "summary": "Return a fake imei code, ex \"546327785982623\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake imei code"
+                    }
+                }
+            }
+        },
+        "/faker/codes/asin": {
+            "get": {
+                "tags": [
+                    "msa-faker-codes"
+                ],
+                "summary": "Return a fake asin code, ex \"B00000IGGJ\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake asin code"
+                    }
+                }
+            }
+        },
+        "/faker/color/hex": {
+            "get": {
+                "tags": [
+                    "msa-faker-color"
+                ],
+                "summary": "Return a random color hex code, ex \"#31a785\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random color hex code"
+                    }
+                }
+            }
+        },
+        "/faker/color/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-color"
+                ],
+                "summary": "Return a random color name, ex \"yellow\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake asin code"
+                    }
+                }
+            }
+        },
+        "/faker/color/rgb": {
+            "get": {
+                "tags": [
+                    "msa-faker-color"
+                ],
+                "summary": "Return a random color rgb code, ex \"90,228,207\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random color rgb code"
+                    }
+                }
+            }
+        },
+        "/faker/color/hsl": {
+            "get": {
+                "tags": [
+                    "msa-faker-color"
+                ],
+                "summary": "Return a random color hsl code, ex \"186.83,132.19,188.5\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random color hsl code"
+                    }
+                }
+            }
+        },
+        "/faker/color/hsla": {
+            "get": {
+                "tags": [
+                    "msa-faker-color"
+                ],
+                "summary": "Return a random color hsla code, ex \"45.03,174.0,157.5,0.7984281192808456\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random color hsla code"
+                    }
+                }
+            }
+        },
+        "/faker/internet/email": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake email, ex \"eliza@mann.net\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake email"
+                    }
+                }
+            }
+        },
+        "/faker/internet/free-email": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake free-email, ex \"freddy@gmail.com\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake free-email"
+                    }
+                }
+            }
+        },
+        "/faker/internet/safe-email": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake safe-email, ex \"christelle@example.org\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake safe-email"
+                    }
+                }
+            }
+        },
+        "/faker/internet/username": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake username, ex \"alexie\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake username"
+                    }
+                }
+            }
+        },
+        "/faker/internet/password": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake password, ex \"vg5msvy1uerg7\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake password"
+                    }
+                }
+            }
+        },
+        "/faker/internet/domain-name": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake domain-name, ex \"effertz.info\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake domain-name"
+                    }
+                }
+            }
+        },
+        "/faker/internet/domain-suffix": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a random domain-suffix, ex \"info\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the random domain-suffix"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv4": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake ipv4 address, ex \"24.29.18.175\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake ipv4 address"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv4/private": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake private ipv4 address, ex \"24.29.18.175\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake private ipv4 address"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv4/public": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake public ipv4 address, ex \"24.29.18.175\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake public ipv4 address"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv4/cdir": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake ipv4 cdir, ex \"24.29.18.175/21\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake ipv4 cdir"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv6": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake ipv6 address, ex \"ac5f:d696:3807:1d72:2eb5:4e81:7d2b:e1df\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake ipv6 address"
+                    }
+                }
+            }
+        },
+        "/faker/internet/ipv6/cdir": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake ipv6 cdir, ex \"ac5f:d696:3807:1d72:2eb5:4e81:7d2b:e1df/78\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake ipv6 cdir"
+                    }
+                }
+            }
+        },
+        "/faker/internet/mac-address": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake mac adress, ex \"e6:0d:00:11:ed:4f\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake mac adress"
+                    }
+                }
+            }
+        },
+        "/faker/internet/url": {
+            "get": {
+                "tags": [
+                    "msa-faker-internet"
+                ],
+                "summary": "Return a fake url, ex \"http://thiel.com/chauncey_simonis\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake url"
+                    }
+                }
+            }
+        },
+        "/faker/file/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-file"
+                ],
+                "summary": "Return a fake filename, ex \"quo_autem/deserunt.bmp\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake filename"
+                    }
+                }
+            }
+        },
+        "/faker/file/extension": {
+            "get": {
+                "tags": [
+                    "msa-faker-file"
+                ],
+                "summary": "Return a fake file extension, ex \"mp3\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake file extension"
+                    }
+                }
+            }
+        },
+        "/faker/file/mime-type": {
+            "get": {
+                "tags": [
+                    "msa-faker-file"
+                ],
+                "summary": "Return a fake file mime-type, ex \"application/pdf\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the fake file mime-type"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/something-smart": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return something smart, ex \"Try to compress the SQL interface\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "something smart"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/abbreviation": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return an hacker related abbreviation, ex \"RAM\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an hacker related abbreviation"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/adjvective": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return an hacker related adjvective, ex \"open-source\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an hacker related adjvective"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/noun": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return a hacker related noun, ex \"bandwidth\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a hacker related noun"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/verb": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return a hacker related verb, ex \"bypass\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a hacker related verb"
+                    }
+                }
+            }
+        },
+        "/faker/hacker/ingverb": {
+            "get": {
+                "tags": [
+                    "msa-faker-hacker"
+                ],
+                "summary": "Return a hacker related ingverb, ex \"synthesizing\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a hacker related ingverb"
+                    }
+                }
+            }
+        },
+        "/faker/crypto/md5": {
+            "get": {
+                "tags": [
+                    "msa-faker-crypto"
+                ],
+                "summary": "Return a fake md5, ex \"6b5ed240042e8a65c55ddb826c3408e6\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake md5"
+                    }
+                }
+            }
+        },
+        "/faker/crypto/sha1": {
+            "get": {
+                "tags": [
+                    "msa-faker-crypto"
+                ],
+                "summary": "Return a fake sha1, ex \"4e99e31c51eef8b2d290e709f757f92e558a503f\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake sha1"
+                    }
+                }
+            }
+        },
+        "/faker/crypto/sha256": {
+            "get": {
+                "tags": [
+                    "msa-faker-crypto"
+                ],
+                "summary": "Return a fake sha256, ex \"51e4dbb424cd9db1ec5fb989514f2a35652ececef33f21c8dd1fd61bb8e3929d\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake sha256"
+                    }
+                }
+            }
+        },
+        "/faker/app/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-app"
+                ],
+                "summary": "Return a fake app name, ex \"Treeflex\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake app name"
+                    }
+                }
+            }
+        },
+        "/faker/app/version": {
+            "get": {
+                "tags": [
+                    "msa-faker-app"
+                ],
+                "summary": "Return a fake app version, ex \"0.7.9\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake app version"
+                    }
+                }
+            }
+        },
+        "/faker/app/author": {
+            "get": {
+                "tags": [
+                    "msa-faker-app"
+                ],
+                "summary": "Return a fake app author, ex \"Daphne Swift\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake app author"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji, ex \":last_quarter_moon:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/people": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the people category, ex \":sleepy:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the people category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/nature": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the nature category, ex \":chestnut:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the nature category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/food-and-drink": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the food and drink category, ex \":tangerine:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the food and drink category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/celebration": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the celebration category, ex \":ribbon:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the celebration category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/activity": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the activity category, ex \":performing_arts:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the activity category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/travel-and-places": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the travel and places category, ex \":truck:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the travel and places category"
+                    }
+                }
+            }
+        },
+        "/faker/slack-emoji/objects-and-symbols": {
+            "get": {
+                "tags": [
+                    "msa-faker-slack-emoji"
+                ],
+                "summary": "Return a random Slack Emoji from the objects-and-symbols category, ex \":alarm_clock:\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Slack Emoji from the objects-and-symbols category"
+                    }
+                }
+            }
+        },
+        "/faker/superhero/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-superhero"
+                ],
+                "summary": "Return a fake superhero name, ex \"Magnificent Shatterstar\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake superhero name"
+                    }
+                }
+            }
+        },
+        "/faker/superhero/power": {
+            "get": {
+                "tags": [
+                    "msa-faker-superhero"
+                ],
+                "summary": "Return a random superhero power, ex \"Photokinesis\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random superhero power"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/character": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars character, ex \"Anakin Skywalker\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars character"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/droid": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars droid, ex \"C-3PO\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars droid"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/planet": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars planet, ex \"Tatooine\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars planet"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/quote": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars quote, ex \"Aren’t you a little short for a Stormtrooper?\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars quote"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/specie": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars specie, ex \"Gungan\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars specie"
+                    }
+                }
+            }
+        },
+        "/faker/starwars/vehicle": {
+            "get": {
+                "tags": [
+                    "msa-faker-starwars"
+                ],
+                "summary": "Return a random starwars vehicle, ex \"Sandcrawler\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random starwars vehicle"
+                    }
+                }
+            }
+        },
+        "/faker/space/planet": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random planet, ex \"Venus\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random planet"
+                    }
+                }
+            }
+        },
+        "/faker/space/moon": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random moon, ex \"Europa\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random moon"
+                    }
+                }
+            }
+        },
+        "/faker/space/galaxy": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random galaxy, ex \"Andromeda\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random galaxy"
+                    }
+                }
+            }
+        },
+        "/faker/space/nebula": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random nebula, ex \"Triffid Nebula\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random nebula"
+                    }
+                }
+            }
+        },
+        "/faker/space/star-cluster": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random star cluster, ex \"Messier 70\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random star cluster"
+                    }
+                }
+            }
+        },
+        "/faker/space/constellation": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random constellation, ex \"Orion\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random constellation"
+                    }
+                }
+            }
+        },
+        "/faker/space/star": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random star, ex \"Proxima Centauri\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random star"
+                    }
+                }
+            }
+        },
+        "/faker/space/agency": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random space agency, ex \"Japan Aerospace Exploration Agency\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random space agency"
+                    }
+                }
+            }
+        },
+        "/faker/space/agency-abv": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random space agency abbreviation, ex \"NASA\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random space agency abbreviation"
+                    }
+                }
+            }
+        },
+        "/faker/space/nasa-space-craft": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random Nasa space craft, ex \"Endeavour\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Nasa space craft"
+                    }
+                }
+            }
+        },
+        "/faker/space/company": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random space company, ex \"SpaceX\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random space company"
+                    }
+                }
+            }
+        },
+        "/faker/space/distance-measurement": {
+            "get": {
+                "tags": [
+                    "msa-faker-space"
+                ],
+                "summary": "Return a random space distance measurement, ex \"15 parsecs\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random space distance measurement"
+                    }
+                }
+            }
+        },
+        "/faker/music/key": {
+            "get": {
+                "tags": [
+                    "msa-faker-music"
+                ],
+                "summary": "Return a random music key, ex \"C\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random music key"
+                    }
+                }
+            }
+        },
+        "/faker/music/instrument": {
+            "get": {
+                "tags": [
+                    "msa-faker-music"
+                ],
+                "summary": "Return a random music instrument, ex \"Ukelele\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random music instrument"
+                    }
+                }
+            }
+        },
+        "/faker/vehicle/vin": {
+            "get": {
+                "tags": [
+                    "msa-faker-vehicle"
+                ],
+                "summary": "Return a random vehicle vin, ex \"LLDWXZLG77VK2LUUF\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random vehicle vin"
+                    }
+                }
+            }
+        },
+        "/faker/vehicle/manufacture": {
+            "get": {
+                "tags": [
+                    "msa-faker-vehicle"
+                ],
+                "summary": "Return a random vehicle manufacturer, ex \"JAGUAR CARS LTD\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random vehicle manufacturer"
+                    }
+                }
+            }
+        },
+        "/faker/gameofthrones/character": {
+            "get": {
+                "tags": [
+                    "msa-faker-gameofthrones"
+                ],
+                "summary": "Return a random Game of Thrones character, ex \"Tyrion Lannister\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Game of Thrones character"
+                    }
+                }
+            }
+        },
+        "/faker/gameofthrones/house": {
+            "get": {
+                "tags": [
+                    "msa-faker-gameofthrones"
+                ],
+                "summary": "Return a random Game of Thrones house, ex \"Stark\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Game of Thrones house"
+                    }
+                }
+            }
+        },
+        "/faker/gameofthrones/city": {
+            "get": {
+                "tags": [
+                    "msa-faker-gameofthrones"
+                ],
+                "summary": "Return a random Game of Thrones city, ex \"Lannisport\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random Game of Thrones city"
+                    }
+                }
+            }
+        },
+        "/faker/pokemon/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-pokemon"
+                ],
+                "summary": "Return a random pokemon name, ex \"Pikachu\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random pokemon name"
+                    }
+                }
+            }
+        },
+        "/faker/pokemon/location": {
+            "get": {
+                "tags": [
+                    "msa-faker-pokemon"
+                ],
+                "summary": "Return a random pokemon location, ex \"Pallet Town\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random pokemon location"
+                    }
+                }
+            }
+        },
+        "/faker/beer/name": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a fake beer name, ex \"Hercules Double IPA\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake beer name"
+                    }
+                }
+            }
+        },
+        "/faker/beer/style": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer style, ex \"Belgian Strong Ale\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer style"
+                    }
+                }
+            }
+        },
+        "/faker/beer/hop": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer hop, ex \"Equinox\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer hop"
+                    }
+                }
+            }
+        },
+        "/faker/beer/yeast": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a fake beer yeast, ex \"2278 - Czech Pils\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a fake beer yeast"
+                    }
+                }
+            }
+        },
+        "/faker/beer/malts": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer malt, ex \"Rye malt\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer malt"
+                    }
+                }
+            }
+        },
+        "/faker/beer/ibu": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer ibu, ex \"40 IBU\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer ibu"
+                    }
+                }
+            }
+        },
+        "/faker/beer/alcohol": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer alcohol percentage, ex \"6.3%\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer alcohol percentage"
+                    }
+                }
+            }
+        },
+        "/faker/beer/blg": {
+            "get": {
+                "tags": [
+                    "msa-faker-beer"
+                ],
+                "summary": "Return a random beer blg, ex \"18.5°Blg\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a random beer blg"
+                    }
+                }
+            }
+        },
+        "/faker/lorem/words": {
+            "get": {
+                "tags": [
+                    "msa-faker-lorem"
+                ],
+                "summary": "Return lorem ipsum words, ex \"dolores\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "lorem ipsum words"
+                    }
+                }
+            }
+        },
+        "/faker/lorem/sentences": {
+            "get": {
+                "tags": [
+                    "msa-faker-lorem"
+                ],
+                "summary": "Return lorem ipsum sentences, ex \"Dolore illum animi et neque accusantium.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "lorem ipsum sentences"
+                    }
+                }
+            }
+        },
+        "/faker/lorem/paragraphs": {
+            "get": {
+                "tags": [
+                    "msa-faker-lorem"
+                ],
+                "summary": "Return lorem ipsum paragraphs, ex \"Dolores quis quia ad quo voluptates. Maxime delectus totam numquam. Necessitatibus vel atque qui dolore.\", \"Id neque nemo. Dolores iusto facere est ad. Accusamus ipsa dolor ut. Et officiis ut hic.Minima eos deleniti.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "lorem ipsum paragraphs"
+                    }
+                }
+            }
+        },
+        "/faker/hipster/words": {
+            "get": {
+                "tags": [
+                    "msa-faker-hipster"
+                ],
+                "summary": "Return hipster ipsum words, ex \"pitchfork\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "hipster ipsum words"
+                    }
+                }
+            }
+        },
+        "/faker/hipster/sentences": {
+            "get": {
+                "tags": [
+                    "msa-faker-hipster"
+                ],
+                "summary": "Return hipster ipsum sentences, ex \"Park iphone leggings put a bird on it.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "hipster ipsum sentences"
+                    }
+                }
+            }
+        },
+        "/faker/hipster/paragraphs": {
+            "get": {
+                "tags": [
+                    "msa-faker-hipster"
+                ],
+                "summary": "Return hipster ipsum paragraphs, ex \"Migas fingerstache pbrb tofu. Polaroid distillery typewriter echo tofu actually. Slow-carb fanny pack pickled direct trade scenester mlkshk plaid. Banjo venmo chambray cold-pressed typewriter. Fap skateboard intelligentsia.\"",
+                "parameters": [
+                    {
+                        "name": "locale",
+                        "in": "query",
+                        "description": "the locale (defaults to en)",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "hipster ipsum paragraphs"
+                    }
+                }
+            }
+        }
+    }
+}

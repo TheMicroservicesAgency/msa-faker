@@ -1,0 +1,2619 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MSA-FAKER",
+		"_postman_id": "82106853-b251-fcb2-fc1e-0aca2413a1f9",
+		"description": "A fake data generator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "faker",
+			"description": "Folder for faker",
+			"item": [
+				{
+					"name": "Return the list of supported locales as a json array",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/locales",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake name, ex \"Tyshawn Johns Sr.\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake name, ex \"Aditya Elton Douglas\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name-with-middle?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake firstname, ex \"Kaci\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name/firstname?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake lastname, ex \"Ernser\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name/lastname?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake prefix, ex \"Mr.\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name/prefix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake suffix, ex \"IV\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name/suffix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake title, ex \"Legacy Creative Director\"",
+					"request": {
+						"url": "http://localhost:9902/faker/name/title?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake phone-number, ex \"397.693.1309\"",
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake cell-phone number, ex \"(186)285-7925\"",
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number/cell-phone?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random US area code, ex \"201\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number/area-code?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random US exchange code, ex \"208\"",
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number/exchange-code?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake subscriber number, ex \"3873\"",
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number/subscriber?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake extension number, ex \"3764\"",
+					"request": {
+						"url": "http://localhost:9902/faker/phone-number/extension?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake city, ex \"Imogeneborough\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/address/city?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake street-name, ex \"Larkin Fork\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/street-name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake street-address, ex \"282 Kevin Brook\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/street-address?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake secondary-address, ex \"Apt. 672\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/secondary-address?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake building-number, ex \"7304\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/building-number?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random zip-code, ex \"58517\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/zip-code?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random zip, ex \"58517\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/address/zip?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random postcode, ex \"58517\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/postcode?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random time-zone, ex \"Asia/Yakutsk\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/time-zone?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake street-suffix, ex \"Street\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/street-suffix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake city-suffix, ex \"fort\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/city-suffix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake city-prefix, ex \"Lake\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/city-prefix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random state, ex \"California\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/address/state?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random state-abbr, ex \"AP\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/state-abbr?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random country, ex \"French Guiana\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/country?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random country-code, ex \"IT\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/country-code?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random latitude, ex \"-58.17256227443719\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/latitude?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random longitude, ex \"-156.65548382095133\"",
+					"request": {
+						"url": "http://localhost:9902/faker/address/longitude?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake credit card number, ex \"1228-1221-1221-1431\"",
+					"request": {
+						"url": "http://localhost:9902/faker/business/credit-card/number?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake credit card expiry-date, ex \"\"",
+					"request": {
+						"url": "http://localhost:9902/faker/business/credit-card/expiry-date?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake credit card type, ex  \"visa\"",
+					"request": {
+						"url": "http://localhost:9902/faker/business/credit-card/type?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake department name, ex \"Grocery, Health & Beauty\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/commerce/department?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake product name, ex \"Practical Granite Shirt\"",
+					"request": {
+						"url": "http://localhost:9902/faker/commerce/product-name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake price, ex \"44.6\"",
+					"request": {
+						"url": "http://localhost:9902/faker/commerce/price?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company name, ex \"Hirthe-Ritchie\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/company/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company suffix , ex \"Group\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/suffix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company catch phrase , ex \"Business-focused coherent parallelism\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/company/catch-phrase?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company buzzword , ex \"Business-focused\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/company/buzzword?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company bs , ex \"empower one-to-one web-readiness\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/company/bs?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company ein , ex \"34-8488813\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/ein?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company duns number, ex \"08-341-3736\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/duns?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake company logo url, ex \"https://pigment.github.com/fake-logos/logos/medium/color/5.png\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/logo?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake swedish organisation number, ex \"7718797652\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/swedish-organisation-number?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake australian business number, ex \"81137773602\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/australian-business-number?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake profession, ex \"firefighter\"",
+					"request": {
+						"url": "http://localhost:9902/faker/company/profession?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake book title, ex \"The Odd Sister\"",
+					"request": {
+						"url": "http://localhost:9902/faker/book/title?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake book author, ex \"Alysha Olsen\"",
+					"request": {
+						"url": "http://localhost:9902/faker/book/author?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake book publisher, ex \"Opus Reader\"",
+					"request": {
+						"url": "http://localhost:9902/faker/book/publisher?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random book genre, ex \"Mystery\"",
+					"request": {
+						"url": "http://localhost:9902/faker/book/genre?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random university name, ex \"Mallowtown Technical College\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/educator/university?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random secondary-school name, ex \"Iceborough Secodary College\"",
+					"request": {
+						"url": "http://localhost:9902/faker/educator/secondary-school?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random university course name, ex \"Associate Degree in Criminology\"",
+					"request": {
+						"url": "http://localhost:9902/faker/educator/course?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random campus name, ex \"Vertapple Campus\"",
+					"request": {
+						"url": "http://localhost:9902/faker/educator/campus?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake team name, ex \"Oregon vixens\"",
+					"request": {
+						"url": "http://localhost:9902/faker/team/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random state, ex \"Oregon\"",
+					"request": {
+						"url": "http://localhost:9902/faker/team/state?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random sport, ex \"lacrosse\"",
+					"request": {
+						"url": "http://localhost:9902/faker/team/sport?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random creature, ex \"gooses\"",
+					"request": {
+						"url": "http://localhost:9902/faker/team/creature?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake bitcoin address, ex \"1HUoGjmgChmnxxYhz87YytV4gVjfPaExmh\"",
+					"request": {
+						"url": "http://localhost:9902/faker/bitcoin/address?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake bitcoin testnet address, ex \"msHGunDvoEwmVFXvd2Bub1SNw5RP1YHJaf\"",
+					"request": {
+						"url": "http://localhost:9902/faker/bitcoin/testnet-address?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake isbn code, ex \"759021701-8\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/codes/isbn?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake ean code, ex \"4600051000057\"",
+					"request": {
+						"url": "http://localhost:9902/faker/codes/ean?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake imei code, ex \"546327785982623\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/codes/imei?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake asin code, ex \"B00000IGGJ\"",
+					"request": {
+						"url": "http://localhost:9902/faker/codes/asin?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random color hex code, ex \"#31a785\"",
+					"request": {
+						"url": "http://localhost:9902/faker/color/hex?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random color name, ex \"yellow\"",
+					"request": {
+						"url": "http://localhost:9902/faker/color/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random color rgb code, ex \"90,228,207\"",
+					"request": {
+						"url": "http://localhost:9902/faker/color/rgb?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random color hsl code, ex \"186.83,132.19,188.5\"",
+					"request": {
+						"url": "http://localhost:9902/faker/color/hsl?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random color hsla code, ex \"45.03,174.0,157.5,0.7984281192808456\"",
+					"request": {
+						"url": "http://localhost:9902/faker/color/hsla?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake email, ex \"eliza@mann.net\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/internet/email?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake free-email, ex \"freddy@gmail.com\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/free-email?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake safe-email, ex \"christelle@example.org\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/safe-email?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake username, ex \"alexie\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/username?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake password, ex \"vg5msvy1uerg7\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/password?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake domain-name, ex \"effertz.info\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/domain-name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random domain-suffix, ex \"info\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/domain-suffix?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake ipv4 address, ex \"24.29.18.175\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv4?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake private ipv4 address, ex \"24.29.18.175\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv4/private?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake public ipv4 address, ex \"24.29.18.175\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv4/public?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake ipv4 cdir, ex \"24.29.18.175/21\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv4/cdir?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake ipv6 address, ex \"ac5f:d696:3807:1d72:2eb5:4e81:7d2b:e1df\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv6?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake ipv6 cdir, ex \"ac5f:d696:3807:1d72:2eb5:4e81:7d2b:e1df/78\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/ipv6/cdir?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake mac adress, ex \"e6:0d:00:11:ed:4f\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/mac-address?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake url, ex \"http://localhost:9902thiel.com/chauncey_simonis\"",
+					"request": {
+						"url": "http://localhost:9902/faker/internet/url?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake filename, ex \"quo_autem/deserunt.bmp\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/file/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake file extension, ex \"mp3\"",
+					"request": {
+						"url": "http://localhost:9902/faker/file/extension?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake file mime-type, ex \"application/pdf\"",
+					"request": {
+						"url": "http://localhost:9902/faker/file/mime-type?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return something smart, ex \"Try to compress the SQL interface\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/something-smart?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return an hacker related abbreviation, ex \"RAM\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/abbreviation?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return an hacker related adjvective, ex \"open-source\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/adjvective?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a hacker related noun, ex \"bandwidth\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/noun?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a hacker related verb, ex \"bypass\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/verb?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a hacker related ingverb, ex \"synthesizing\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hacker/ingverb?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake md5, ex \"6b5ed240042e8a65c55ddb826c3408e6\"",
+					"request": {
+						"url": "http://localhost:9902/faker/crypto/md5?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake sha1, ex \"4e99e31c51eef8b2d290e709f757f92e558a503f\"",
+					"request": {
+						"url": "http://localhost:9902/faker/crypto/sha1?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake sha256, ex \"51e4dbb424cd9db1ec5fb989514f2a35652ececef33f21c8dd1fd61bb8e3929d\"",
+					"request": {
+						"url": "http://localhost:9902/faker/crypto/sha256?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake app name, ex \"Treeflex\"",
+					"request": {
+						"url": "http://localhost:9902/faker/app/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake app version, ex \"0.7.9\"",
+					"request": {
+						"url": "http://localhost:9902/faker/app/version?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake app author, ex \"Daphne Swift\"",
+					"request": {
+						"url": "http://localhost:9902/faker/app/author?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji, ex \":last_quarter_moon:\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the people category, ex \":sleepy:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/people?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the nature category, ex \":chestnut:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/nature?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the food and drink category, ex \":tangerine:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/food-and-drink?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the celebration category, ex \":ribbon:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/celebration?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the activity category, ex \":performing_arts:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/activity?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the travel and places category, ex \":truck:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/travel-and-places?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Slack Emoji from the objects-and-symbols category, ex \":alarm_clock:\"",
+					"request": {
+						"url": "http://localhost:9902/faker/slack-emoji/objects-and-symbols?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake superhero name, ex \"Magnificent Shatterstar\"",
+					"request": {
+						"url": "http://localhost:9902/faker/superhero/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random superhero power, ex \"Photokinesis\"",
+					"request": {
+						"url": "http://localhost:9902/faker/superhero/power?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars character, ex \"Anakin Skywalker\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/character?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars droid, ex \"C-3PO\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/droid?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars planet, ex \"Tatooine\"",
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/planet?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars quote, ex \"Aren’t you a little short for a Stormtrooper?\"",
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/quote?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars specie, ex \"Gungan\"",
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/specie?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random starwars vehicle, ex \"Sandcrawler\"",
+					"request": {
+						"url": "http://localhost:9902/faker/starwars/vehicle?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random planet, ex \"Venus\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/planet?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random moon, ex \"Europa\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/moon?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random galaxy, ex \"Andromeda\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/galaxy?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random nebula, ex \"Triffid Nebula\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/nebula?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random star cluster, ex \"Messier 70\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/star-cluster?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random constellation, ex \"Orion\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/constellation?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random star, ex \"Proxima Centauri\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/star?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random space agency, ex \"Japan Aerospace Exploration Agency\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/agency?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random space agency abbreviation, ex \"NASA\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/agency-abv?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Nasa space craft, ex \"Endeavour\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/nasa-space-craft?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random space company, ex \"SpaceX\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/company?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random space distance measurement, ex \"15 parsecs\"",
+					"request": {
+						"url": "http://localhost:9902/faker/space/distance-measurement?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random music key, ex \"C\"",
+					"request": {
+						"url": "http://localhost:9902/faker/music/key?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random music instrument, ex \"Ukelele\"",
+					"request": {
+						"url": "http://localhost:9902/faker/music/instrument?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random vehicle vin, ex \"LLDWXZLG77VK2LUUF\"",
+					"request": {
+						"url": "http://localhost:9902/faker/vehicle/vin?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random vehicle manufacturer, ex \"JAGUAR CARS LTD\"",
+					"request": {
+						"url": "http://localhost:9902/faker/vehicle/manufacture?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Game of Thrones character, ex \"Tyrion Lannister\"",
+					"request": {
+						"url": "http://localhost:9902/faker/gameofthrones/character?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Game of Thrones house, ex \"Stark\"",
+					"request": {
+						"url": "http://localhost:9902/faker/gameofthrones/house?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random Game of Thrones city, ex \"Lannisport\"",
+					"request": {
+						"url": "http://localhost:9902/faker/gameofthrones/city?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random pokemon name, ex \"Pikachu\"",
+					"request": {
+						"url": "http://localhost:9902/faker/pokemon/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random pokemon location, ex \"Pallet Town\"",
+					"request": {
+						"url": "http://localhost:9902/faker/pokemon/location?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake beer name, ex \"Hercules Double IPA\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/name?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer style, ex \"Belgian Strong Ale\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/style?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer hop, ex \"Equinox\"",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/faker/beer/hop?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a fake beer yeast, ex \"2278 - Czech Pils\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/yeast?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer malt, ex \"Rye malt\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/malts?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer ibu, ex \"40 IBU\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/ibu?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer alcohol percentage, ex \"6.3%\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/alcohol?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a random beer blg, ex \"18.5°Blg\"",
+					"request": {
+						"url": "http://localhost:9902/faker/beer/blg?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return lorem ipsum words, ex \"dolores\"",
+					"request": {
+						"url": "http://localhost:9902/faker/lorem/words?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return lorem ipsum sentences, ex \"Dolore illum animi et neque accusantium.\"",
+					"request": {
+						"url": "http://localhost:9902/faker/lorem/sentences?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return lorem ipsum paragraphs, ex \"Dolores quis quia ad quo voluptates. Maxime delectus totam numquam. Necessitatibus vel atque qui dolore.\", \"Id neque nemo. Dolores iusto facere est ad. Accusamus ipsa dolor ut. Et officiis ut hic.Minima eos deleniti.\"",
+					"request": {
+						"url": "http://localhost:9902/faker/lorem/paragraphs?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return hipster ipsum words, ex \"pitchfork\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hipster/words?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return hipster ipsum sentences, ex \"Park iphone leggings put a bird on it.\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hipster/sentences?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return hipster ipsum paragraphs, ex \"Migas fingerstache pbrb tofu. Polaroid distillery typewriter echo tofu actually. Slow-carb fanny pack pickled direct trade scenester mlkshk plaid. Banjo venmo chambray cold-pressed typewriter. Fap skateboard intelligentsia.\"",
+					"request": {
+						"url": "http://localhost:9902/faker/hipster/paragraphs?locale=en",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms",
+			"description": "Folder for ms",
+			"item": [
+				{
+					"name": "Return the microservice version number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/ms/version",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/ms/name",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice readme in markdown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/ms/readme.md",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the microservice readme in html",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/ms/readme.html",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "nginx",
+			"description": "Folder for nginx",
+			"item": [
+				{
+					"name": "Return stats about Nginx in JSON",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/nginx/stats.json",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return a dashboard displaying the stats from Nginx",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/nginx/stats.html",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "swagger",
+			"description": "Folder for swagger",
+			"item": [
+				{
+					"name": "Return the microservice Swagger JSON file",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/swagger/swagger.json",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Return the Swagger-UI page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:9902/swagger/#",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
