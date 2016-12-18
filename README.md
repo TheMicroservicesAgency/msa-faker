@@ -108,4 +108,4 @@ Check out the [swagger docs](/swagger/#/)for the full list of endpoints. Here ar
 
 ## About
 
-A project by the [Microservices Agency](https://microservices.agency).
+A project by the [Microservices Agency](http://microservices.agency).
