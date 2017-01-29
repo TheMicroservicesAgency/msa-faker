@@ -4,6 +4,13 @@ require 'faker'
 
 locales = ['ca-CAT', 'ca', 'da-DK', 'de-AT', 'de-CH', 'de', 'en-AU', 'en-BORK', 'en-CA', 'en-GB', 'en-IND', 'en-NEP', 'en-NG', 'en-NZ', 'en-PAK', 'en-SG', 'en-UG', 'en-US', 'en-ZA', 'en-au-ocker', 'en', 'es-MX', 'es', 'fa', 'fi-FI', 'fr', 'he', 'it', 'ja', 'ko', 'nb-NO', 'nl', 'pl', 'pt-BR', 'pt', 'ru', 'sk', 'sv', 'uk', 'vi', 'zh-CN', 'zh-TW']
 
+# executed only once, at startup
+configure do
+
+  # to prevents errors due to Rack::Protection::JsonCsrf
+  disable :protection
+end
+
 # Before processing each http request
 before do
   # Set the response headers
