@@ -29,7 +29,7 @@ $ curl http://localhost:9902/faker/address/city?locale=sv
 
 ## Endpoints
 
-The locale parameter can be optionnaly supplied to any endpoint to change the locality of the generated data. This has mainly an effect on the endpoints like **/faker/name** and **/faker/address**, but will probably not change anything on endpoints like **/faker/code** or **/faker/internet**. You can check the support for each locale at [https://github.com/stympy/faker/tree/master/lib/locales](https://github.com/stympy/faker/tree/master/lib/locales), and get the list with:
+The locale parameter can be optionally supplied to any endpoint to change the locality of the generated data. This has mainly an effect on the endpoints like **/faker/name** and **/faker/address**, but will probably not change anything on endpoints like **/faker/code** or **/faker/internet**. You can check the support for each locale at [https://github.com/stympy/faker/tree/master/lib/locales](https://github.com/stympy/faker/tree/master/lib/locales), and get the list with:
 
 - [/faker/locales](/faker/locales) : Get the list of supported locales
 
@@ -90,21 +90,13 @@ Check out the [swagger docs](/swagger/#/)for the full list of endpoints. Here ar
 ## Standard endpoints
 
 - [/ms/version](/ms/version) : returns the version number
-
 - [/ms/name](/ms/name) : returns the name
-
 - [/ms/readme.md](/ms/readme.md) : returns the readme (this file)
-
 - [/ms/readme.html](/ms/readme.html) : returns the readme as html
-
 - [/swagger/swagger.json](/swagger/swagger.json) : returns the swagger api documentation
-
 - [/swagger/#/](/swagger/#/) : returns swagger-ui displaying the api documentation
-
 - [/nginx/stats.json](/nginx/stats.json) : returns stats about Nginx
-
 - [/nginx/stats.html](/nginx/stats.html) : returns a dashboard displaying the stats from Nginx
-
 
 ## About
 
